@@ -1,6 +1,49 @@
+
 .P-contact
   padding 4rem 3rem
-
-  // Maximum central
   max-width 1350px
   margin 0 auto
+
+.contact-card
+  background #ffffff
+  border-radius 1rem
+  box-shadow 0 8px 24px rgba(0, 0, 0, 0.1)
+  padding 2rem 2.5rem
+  max-width 600px
+  margin 2rem auto 0
+  display flex
+  flex-direction column
+  gap 1.5rem
+
+.contact-item
+  display flex
+  align-items center
+  gap 1rem
+
+.contact-label
+  font-weight 600
+  font-size 1.5rem
+  color #1B2A41
+  min-width 80px
+
+.contact-link
+  color #1DA57A
+  text-decoration none
+  position relative
+  padding-bottom 2px
+  font-size 1.5rem
+  &::after
+    content ''
+    position absolute
+    left 0
+    bottom 0
+    width 0
+    height 2px
+    background #1DA57A
+    transition width 0.3s ease-in-out
+  &:hover::after
+    width 100%
+
+.contact-text
+  font-size 1.5rem
+  color #333333

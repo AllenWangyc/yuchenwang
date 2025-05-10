@@ -1,14 +1,25 @@
-import { SectionHeader } from "../../components";
-import './contact.styl'
+import React from 'react';
+import SectionHeader from '../../components/SectionHeader';
+import './contact.styl';
 
-const Contact = () => {
+export default function Contact() {
   return (
     <div className="P-contact">
-      <SectionHeader
-        title="Contact"
-      />
+      <SectionHeader title="Contact" />
+      <div className="contact-card">
+        <div className="contact-item">
+          <span className="contact-label">Email:</span>
+          <a href="mailto:your.email@example.com" className="contact-link">
+            a.wangyc@gmail.com
+          </a>
+        </div>
+        <div className="contact-item">
+          <span className="contact-label">Address:</span>
+          <span className="contact-text">
+            Auckland, New Zealand
+          </span>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
-
-export default Contact;
