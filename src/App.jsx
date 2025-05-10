@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, ConfigProvider } from 'antd';
 import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
 import Home from './pages/Home';
 import './App.styl';
@@ -19,20 +19,30 @@ function App() {
   return (
     <div className='P-app'>
       <Layout hasSider className='layout'>
-        <Sider className='sider'
-          width="20%"
-          breakpoint="lg"
-          collapsedWidth="0"
-          onBreakpoint={broken => {
-            console.log(broken);
-          }}
-          onCollapse={(collapsed, type) => {
-            console.log(collapsed, type);
+        <ConfigProvider
+          theme={{
+            components: {
+              Layout: {
+                siderBg: '#2D3E50'
+              },
+            },
           }}
         >
-          <div className="demo-logo-vertical" />
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} items={items} />
-        </Sider>
+          <Sider className='sider'
+            width="20%"
+            breakpoint="lg"
+            collapsedWidth="0"
+            onBreakpoint={broken => {
+              console.log(broken);
+            }}
+            onCollapse={(collapsed, type) => {
+              console.log(collapsed, type);
+            }}
+          >
+            <div className="demo-logo-vertical" />
+            <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} items={items} />
+          </Sider>
+        </ConfigProvider>
         <Layout>
           <Content className='content'>
             <Home />

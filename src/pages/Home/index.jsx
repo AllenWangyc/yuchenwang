@@ -1,12 +1,18 @@
+import Typewriter from '../../components/TypeWriter';
 import './home.styl';
-// import launch_image from '../../assets/bg_image.jpg';
+
+const positions = ['Web Developer ', "Cloud Practitioner ", "Full-stack Developer ", "Software Engineer "];
 
 const Home = () => {
   return (
     <div className='hero'>
       <div className="hero-text">
         <h1>Yuchen Wang,</h1>
-        <p>I'm a Web Developer</p>
+        <Typewriter
+          words={positions}
+          speed={120}
+          pause={2500}
+        />
       </div>
     </div>
   )

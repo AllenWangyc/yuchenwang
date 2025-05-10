@@ -1,0 +1,24 @@
+
+.typewriter
+  display inline-block
+  white-space nowrap
+  overflow hidden
+  font-size: 3rem;
+
+  /* 只有动态文字打下划线 */
+.typewriter-text
+  display inline-block        /* 保证 border-bottom 只包文字宽度 */
+  border-bottom 5px solid rgba(20, 157, 221, 0.45)
+  padding-bottom 0.1em        /* 根据视觉微调下划线位置 */
+
+.cursor
+  display inline-block
+  width 2px
+  height 1em
+  margin-left 2px
+  background #fff
+  animation blink 0.8s step-end infinite
+
+@keyframes blink
+  50%
+    background transparent
