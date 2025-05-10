@@ -8,7 +8,6 @@ const About = () => {
     <div className="P-about">
       <SectionHeader
         title="About"
-        underlineColor="rgb(20,157,221)"
       />
       <div className="about-content">
         <div className="about-image-wrapper">

@@ -6,7 +6,7 @@ import './SectionHeader.styl';
  * Reuseable component: including title and underline
  * @param {{ title: string, underlineColor?: string }} props
  */
-export default function SectionHeader({ title, underlineColor = '#1DA57A' }) {
+export default function SectionHeader({ title, underlineColor = 'rgb(20,157,221)' }) {
   return (
     <div className="section-header">
       <h2>{title}</h2>

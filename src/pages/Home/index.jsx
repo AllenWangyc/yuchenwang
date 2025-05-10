@@ -8,7 +8,7 @@ const Home = () => {
   const [mounted, setMounted] = useState(true);
   useEffect(() => {
     setMounted(true);
-  })
+  }, [])
   return (
     <div className='hero'>
       <div className="hero-text">

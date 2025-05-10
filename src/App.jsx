@@ -1,8 +1,7 @@
 import React from 'react';
 import { Layout, Menu, ConfigProvider, Avatar } from 'antd';
 import { ProjectOutlined, UserOutlined, HomeOutlined, ReadOutlined, FileTextOutlined, MailOutlined } from '@ant-design/icons';
-import Home from './pages/Home';
-import About from './pages/About';
+import { Home, About, Skill, Projects, Contact } from './pages';
 import './App.styl';
 import { fbIcon, githubIcon, linkedinIcon, igIcon, avatar } from './assets';
 
@@ -78,7 +77,6 @@ function App() {
               <Menu mode="inline" defaultSelectedKeys={['1']} items={items} />
             </ConfigProvider>
 
-
             <div className="social-container">
               <a href="https://linkedin.com/in/yuchen-wang-42b920272" target="_blank" rel="noreferrer">
                 <img src={linkedinIcon} alt="LinkedIn" />
@@ -93,7 +91,6 @@ function App() {
                 <img src={igIcon} alt="Instagram" />
               </a>
             </div>
-
           </Sider>
         </ConfigProvider>
 
@@ -101,6 +98,9 @@ function App() {
           <Content className='content'>
             <Home />
             <About />
+            <Skill />
+            <Projects />
+            <Contact />
             <Footer style={{ textAlign: 'center' }}>
               © {new Date().getFullYear()} Yuchen Wang. All rights reserved.
             </Footer>
