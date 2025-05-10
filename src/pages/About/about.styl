@@ -1,0 +1,66 @@
+.P-about
+  padding 4rem 3rem
+
+  // Maximum central
+  max-width 1200px
+  margin 0 auto
+
+.about-content
+  display grid
+  grid-template-columns 0.6fr 1fr
+  align-items center
+  gap 3rem
+  margin-top 2rem
+
+  // Switch to one-column with mobile size
+  @media (max-width: 768px)
+    grid-template-columns 1fr
+
+  .about-image-wrapper
+    position relative
+    overflow hidden
+    border-radius 1rem
+    box-shadow 0 8px 24px rgba(0, 0, 0, 0.1)
+
+    .about-image
+      display block
+      width 100%
+      height auto
+      object-fit cover
+
+  .about-text
+    font-size 1.5rem
+    font-weight: 450
+    line-height 1.8
+    color #333
+
+    
+    .doodle
+      position inline-block
+      /* 留点儿空间让伪元素露出来 */
+      padding-bottom .2em
+      background none
+
+    .doodle::after
+      content ''
+      position absolute
+      left 0
+      bottom 0
+      height .3em                            // 线条粗细
+      width 0                                 // 动画从 0 → 100%
+      background-image url('/assets/doodle-underline.svg')
+      background-repeat no-repeat
+      background-size 100% 100%
+      transition none                         // 关闭默认 transition
+      animation doodle-draw 1s ease-out forwards
+      animation-delay .6s                     // 名字浮现后再开始画线
+
+    @keyframes doodle-draw
+      to
+        width 100%
+
+    p
+      margin 0 0 1.5rem
+      position relative
+    p:last-child
+      margin-bottom 0

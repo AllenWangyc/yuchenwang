@@ -8,6 +8,47 @@
     bottom 0
     scrollbar-gutter stable
 
+    .info-container
+      height 30%
+
+      .avatar-wrapper
+        display flex
+        justify-content center
+        align-items center
+        height 70%
+      .name-wrapper
+        display flex
+        justify-content center
+        height 30%
+        .name
+          font-size 2rem
+          font-weight 550
+
+    .social-container
+      position absolute
+      bottom 3rem
+      left 50%
+      transform translateX(-50%)
+      display flex
+      gap 2rem
+      z-index 2
+
+    .social-container a
+      display block
+      width 2rem
+      height 2rem
+
+      img
+        width 100%
+        height 100%
+        object-fit contain
+        filter grayscale(30%) brightness(1.2)
+        transition filter 0.3s ease, transform 0.3s ease
+
+      &:hover img
+        filter none
+        transform scale(1.1)
+
   .content
     flex 1
   

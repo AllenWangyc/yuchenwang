@@ -18,11 +18,6 @@ const Home = () => {
         <p className={`fade ${mounted ? 'in delay-1' : ''}`}>
           <Typewriter words={positions} speed={120} pause={2500} />
         </p>
-        {/* <Typewriter
-          words={positions}
-          speed={120}
-          pause={2500}
-        /> */}
       </div>
     </div>
   )
