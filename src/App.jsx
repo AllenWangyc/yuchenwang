@@ -4,6 +4,7 @@ import { ProjectOutlined, UserOutlined, HomeOutlined, ReadOutlined, FileTextOutl
 import { Home, About, Skill, Projects, Contact } from './pages';
 import './App.styl';
 import { fbIcon, githubIcon, linkedinIcon, igIcon, avatar } from './assets';
+import { data } from '@/data/project_data'
 
 
 const { Content, Footer, Sider } = Layout;
@@ -99,7 +100,7 @@ function App() {
             <Home />
             <About />
             <Skill />
-            <Projects />
+            <Projects {...data} />
             <Contact />
             <Footer style={{ textAlign: 'center' }}>
               © {new Date().getFullYear()} Yuchen Wang. All rights reserved.

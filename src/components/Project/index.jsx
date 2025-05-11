@@ -1,6 +1,6 @@
 import React from 'react';
 import './Project.styl';
-import { githubIcon } from '../../assets';
+import { githubIcon } from '@/assets';
 
 /**
  * Project Card component
