@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Layout, Menu, ConfigProvider, Avatar } from 'antd';
 import { ProjectOutlined, UserOutlined, HomeOutlined, ReadOutlined, FileTextOutlined, MailOutlined } from '@ant-design/icons';
 import { Home, About, Skill, Projects, Contact } from './pages';
@@ -9,22 +9,23 @@ import { data } from '@/data/project_data'
 
 const { Content, Footer, Sider } = Layout;
 
-const items = [HomeOutlined, UserOutlined, ReadOutlined, ProjectOutlined, MailOutlined].map(
-  (icon, index) => ({
-    key: String(index + 1),
-    icon: React.createElement(icon),
-    label: `nav ${index + 1}`,
-  }),
-);
-
-items[0].label = 'Home';
-items[1].label = 'About';
-items[2].label = 'Skill';
-items[3].label = 'Projects';
-items[4].label = 'Contact';
+const items = [
+  { key: 'home', icon: <HomeOutlined />, label: 'Home' },
+  { key: 'about', icon: <UserOutlined />, label: 'About' },
+  { key: 'skill', icon: <ReadOutlined />, label: 'Skill' },
+  { key: 'projects', icon: <ProjectOutlined />, label: 'Projects' },
+  { key: 'contact', icon: <MailOutlined />, label: 'Contact' },
+];
 
 
 function App() {
+  const handleClick = useCallback(({ key }) => {
+    const el = document.getElementById(key);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, []);
+
   return (
     <div className='P-app'>
       <Layout hasSider className='layout'>
@@ -75,7 +76,7 @@ function App() {
                 },
               }}
             >
-              <Menu mode="inline" defaultSelectedKeys={['1']} items={items} />
+              <Menu mode="inline" defaultSelectedKeys={['home']} items={items} onClick={handleClick} />
             </ConfigProvider>
 
             <div className="social-container">

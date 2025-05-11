@@ -4,7 +4,7 @@ import './contact.styl';
 
 export default function Contact() {
   return (
-    <div className="P-contact">
+    <div id='contact' className="P-contact">
       <SectionHeader title="Contact" />
       <div className="contact-card">
         <div className="contact-item">

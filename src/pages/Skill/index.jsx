@@ -25,7 +25,7 @@ const skills = [
 
 const Skill = () => {
   return (
-    <div className='P-skill'>
+    <div id='skill' className='P-skill'>
       <SectionHeader title='Skill' />
       <div className="skills-grid">
         {skills.map(({ name, Icon }, idx) => (

@@ -5,7 +5,7 @@ import { avatar } from '../../assets'
 
 const About = () => {
   return (
-    <div className="P-about">
+    <div id='about' className="P-about">
       <SectionHeader
         title="About"
       />

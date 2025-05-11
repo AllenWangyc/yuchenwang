@@ -10,7 +10,7 @@ const Home = () => {
     setMounted(true);
   }, [])
   return (
-    <div className='hero'>
+    <div id='home' className='hero'>
       <div className="hero-text">
         <h1 className={`fade ${mounted ? 'in delay-0' : ''}`}>
           Yuchen Wang,

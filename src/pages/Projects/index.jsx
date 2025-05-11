@@ -13,7 +13,7 @@ const Projects = ({ projects }) => {
   };
 
   return (
-    <div className="P-projects">
+    <div id='projects' className="P-projects">
       <SectionHeader
         title="Projects"
       />
