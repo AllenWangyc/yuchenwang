@@ -22,11 +22,13 @@ import awsIcon from './aws.png';
 import pythonIcon from './python.png';
 import githubIcon2 from './github-skill.png';
 
+import factvax from './factvax.png';
+
 
 export { fbIcon, githubIcon, linkedinIcon, igIcon, avatar };
 
 export {
   csIcon, cssIcon, figmaIcon, htmlIcon, jsIcon, nodejsIcon, awsIcon,
   reactIcon, postgreIcon, typescriptIcon, stylusIcon, mongodbIcon, dockerIcon,
-  pythonIcon, githubIcon2
+  pythonIcon, githubIcon2, factvax
 };
