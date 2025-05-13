@@ -1,12 +1,59 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio! This site showcases my skills, experience, and projects in a clean, interactive format.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+1. [Demo](#demo)
+2. [Features](#features)
+3. [Tech Stack](#tech-stack)
+4. [Installation](#installation)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Demo
+
+🔗 Live Demo (Desktop only): [yuchen-portfolio.netlify.app](https://yuchen-portfolio.netlify.app)
+
+> **Note:** This site is currently optimized for desktop viewing. A mobile-responsive version is coming soon! 📱
+
+---
+
+## Features
+
+* **About Me**: Interactive section with typewriter effect and graffiti-style underline.
+* **Skills & Technologies**: Grid of tech icons with hover tooltips.
+* **Projects Showcase**: Rotating carousel displaying project details, live demos, and GitHub links.
+* **Downloadable Resume**: Download or view resume directly from the sidebar.
+* **Smooth Scrolling**: Click sidebar items to navigate sections with smooth scroll.
+
+---
+
+## Tech Stack
+
+* **Framework**: React
+* **UI Library**: Ant Design
+* **Bundler**: Vite
+* **Styling**: Stylus (CSS preprocessor)
+* **Animation**: CSS keyframes, React hooks
+
+---
+
+## Installation
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/yourusername/portfolio.git
+   ```
+2. Navigate into the project directory:
+
+   ```bash
+   cd portfolio
+   ```
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
