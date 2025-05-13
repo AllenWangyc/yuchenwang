@@ -10,7 +10,7 @@
     position sticky
     top 0
     height 100vh
-    overflow hidden
+    overflow auto
 
     .info-container
       height 30%
@@ -29,14 +29,20 @@
           font-weight 550
 
     .menu-wrapper
-      flex 1
+      // flex 1
+      height 40%
       overflow auto
 
+    .bottom-container
+      position relative
+      height 30%
+
     .bottom-wrapper
-      position absolute
+      position: sticky
+      bottom: 0
+      // padding-top: 5rem
       width 100%
       padding 1rem
-      bottom 3rem
 
       .resume-btn-wrapper
         display flex
